@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Binaria</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Calculadora Binaria</h1>
+        </header>
+
+        <main class="grid">
+
+        <div id="De decimal a Binario" class="card">
+            <h2>Convertidor de Decimal a Binario</h2>
+            <p>Ingresa un número decimal en el campo de abajo y presiona "Convertir a Binario" para ver su equivalente en binario.</p>
+            <form id="formulario decimalABinario">
+            
+            <label for="numeroAconvertir">Introduce un número decimal:</label>
+            <br>
+
+            <input type="number" id="numeroAconvertir" required>
+            <br>
+
+            <button type="submit">Convertir a Binario</button>
+        </form>
+        <br>
+        <h3>Resultado:</h3>
+        
+        <div id="resultadoDecimal" class="result"></div>
+        </div>
+
+
+        <div id="De binario a Decimal" class="card">
+            <h2>Convertidor de Binario a Decimal</h2>
+            <p>Ingresa un número binario en el campo de abajo y presiona "Convertir a Decimal" para ver su equivalente en decimal.</p>
+            <form id="formulario binarioADecimal">
+            
+            <label for="numeroBinarioAconvertir">Introduce un número binario:</label>
+            <br>
+
+            <input type="text" id="numeroBinarioAconvertir" pattern="[01]+" required>
+            <br>
+
+            <button type="submit">Convertir a Decimal</button>
+            </form>
+            <br>
+            <h3>Resultado:</h3>
+         
+            <div id="resultadoBinario" class="result"></div>
+        </div>
+
+        <div id="Suma de Binarios" class="card">
+            <h2>Suma de Binarios</h2>
+            <p>Ingresa dos números binarios en los campos de abajo y presiona "Sumar Binarios" para ver el resultado de su suma en binario.</p>
+            <form id="formulario sumaDeBinarios">
+            
+            <label for="primerNumeroBinario">Número binario 1:</label>
+            <br>
+
+            <input type="text" id="primerNumeroBinario" pattern="[01]+" required>
+
+            <br>
+            <p>+</p>
+    
+
+            <label for="segundoNumeroBinario">Número binario 2:</label>
+            <br>
+
+            <input type="text" id="segundoNumeroBinario" pattern="[01]+" required>
+            <br>
+            <br>
+
+            <button type="submit">Sumar Binarios</button>
+            </form>
+            <br>
+            <h3>Resultado:</h3>
+        
+            <div id="resultadoSumaBinarios" class="result"></div> 
+
+        </div>
+
+        <div id="Resta De Binarios" class="card">
+            <h2>Resta de Binarios</h2>
+            <p>Ingresa dos números binarios en los campos de abajo y presiona "Restar Binarios" para ver el resultado de su resta en binario.</p>
+            <form id="formulario restaDeBinarios">
+
+            <label for="primerNumeroBinarioResta">Número binario 1:</label>
+            <br>
+
+            <input type="text" id="primerNumeroBinarioResta" pattern="[01]+" required>
+
+            <br>
+            <p>-</p>
+
+            <label for="segundoNumeroBinarioResta">Número binario 2:</label>
+            <br>
+
+            <input type="text" id="segundoNumeroBinarioResta" pattern="[01]+" required>
+            <br>
+            <br>
+
+            <button type="submit">Restar Binarios</button>
+            </form>
+            <br>
+            <h3>Resultado:</h3>
+            
+            <div id="resultadoRestaBinarios" class="result"></div>
+
+        </div>
+
+        <div id="Multiplicacion de Binarios" class="card"> 
+            <h2>Multiplicacion de Binarios</h2>
+            <p>Ingresa dos números binarios en los campos de abajo y presiona "Multiplicar Binarios" para ver el resultado de su multiplicación en binario.</p>
+            <form id="formulario multiplicacionDeBinarios">
+
+            <label for="primerNumeroBinarioMultiplicacion">Número binario 1:</label>
+            <br>
+
+            <input type="text" id="primerNumeroBinarioMultiplicacion" pattern="[01]+" required>
+
+            <br>
+            <p>x</p>
+
+            <label for="segundoNumeroBinarioMultiplicacion">Número binario 2:</label>
+            <br>
+
+            <input type="text" id="segundoNumeroBinarioMultiplicacion" pattern="[01]+" required>
+            <br>
+            <br>
+
+            <button type="submit">Multiplicar Binarios</button>
+            </form>
+            <br>
+            <h3>Resultado:</h3>
+       
+            <div id="resultadoMultiplicacionBinarios" class="result"></div>
+
+        </div>
+
+        <div id="Division de Binarios" class="card">
+            <h2>División de Binarios</h2>
+            <p>Ingresa dos números binarios en los campos de abajo y presiona "Dividir Binarios" para ver el resultado de su división en binario.</p>
+            <form id="formulario divisionDeBinarios">
+
+            <label for="primerNumeroBinarioDivision">Número binario 1:</label>
+            <br>
+
+            <input type="text" id="primerNumeroBinarioDivision" pattern="[01]+" required>
+
+            <br>
+            <p>%</p>
+
+            <label for="segundoNumeroBinarioDivision">Número binario 2:</label>
+            <br>
+
+            <input type="text" id="segundoNumeroBinarioDivision" pattern="[01]+" required>
+            <br>
+            <br>
+
+            <button type="submit">Dividir Binarios</button>
+            </form>
+            <br>
+            <h3>Resultado:</h3>
+            
+            <div id="resultadoDivisionBinarios" class="result"></div>
+        </div>
+        </main>
+    </div>
+    <footer>
+        <p>Hecho con amor por Jorge Martinez - 2025</p>
+        <p> Todos los derechos reservados </p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+:root{
+  --gap: 1.2rem;
+  --card-bg: #e9f5ff;     /* azul clarito */
+  --card-border: #cfe9ff;
+  --card-radius: 12px;
+  --card-shadow: 0 6px 18px rgba(14,30,60,0.08);
+  --max-width: 1200px;
+  --page-padding: 1rem;
+  --text-color: #0e2240;
+}
+
+/* Reset ligero */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;color:var(--text-color);background:#f6fbff}
+img{max-width:100%;height:auto;display:block}
+
+/* Contenedor principal centrado */
+.container{
+  max-width:var(--max-width);
+  margin:1.2rem auto;
+  padding:var(--page-padding);
+}
+
+/* Encabezados */
+header h1{
+  margin:0 0 .6rem 0;
+  font-size:3rem;
+  letter-spacing:0.2px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+h2{margin-top:0.8rem}
+
+/* GRID responsive: 1 columna móvil, 2 en tablet, 3 en desktop */
+.grid{
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+/* Breakpoints */
+@media (min-width: 640px){ /* tablet */
+  .grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1000px){ /* desktop */
+  .grid{ grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Card (cada celda del grid) */
+.card{
+  background: linear-gradient(180deg, var(--card-bg), #f2fbff);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  padding: 1rem;
+  box-shadow: var(--card-shadow);
+  transition: transform .15s ease, box-shadow .15s ease;
+  min-height: 160px;
+  display:flex;
+  flex-direction:column;
+  gap:.6rem;
+}
+
+/* Efecto hover */
+.card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(14,30,60,0.12);
+}
+
+/* Formularios y botones dentro de las cards */
+.card form{ margin:0; display:flex; flex-direction:column; gap:.45rem; }
+.card label{ font-weight:600; font-size:.95rem; }
+.card input[type="number"],
+.card input[type="text"],
+.card button{
+  padding:.55rem .7rem;
+  border-radius:8px;
+  border:1px solid rgba(14,30,60,0.08);
+  outline:none;
+  font-size:1rem;
+}
+
+/* Botón destacado */
+.card button{
+  background: linear-gradient(180deg,#2f7bd9,#1f5fc4);
+  color:white;
+  border: none;
+  cursor:pointer;
+  margin-top:.4rem;
+}
+.card button:active{ transform: translateY(1px) }
+
+/* Resultado */
+.result{
+  margin-top:.4rem;
+  padding:.6rem;
+  border-radius:8px;
+  background: rgba(216, 216, 216, 0.301);
+  border: 1px dashed rgba(14,30,60,0.04);
+  font-family: monospace;
+  white-space:pre-wrap;
+}
+
+/* Estética extra para títulos pequeños dentro de la card */
+.card h2{
+  margin:0;
+  font-size:1.05rem;
+}
+
+/* Footer simple */
+footer{
+  text-align: center;
+  padding: 1.2rem 0;
+  font-size: 0.9rem;
+  color: #555;
+}
