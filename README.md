@@ -1,3 +1,3 @@
 # Calculadora-Binaria-Web
 Este proyecto es una calculadora web en binario
-calculadorabinariaweb.netlify.app
+https://calculadorabinariaweb.netlify.app/
